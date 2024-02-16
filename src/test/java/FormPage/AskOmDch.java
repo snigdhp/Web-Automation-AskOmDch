@@ -14,11 +14,17 @@ import org.testng.annotations.Test;
         Step1_homePage();
         Step2_clickOnAccounts();
         Step3_regsiterNewCustomer();
+        Step4_clickOnRegisterButton();
 
 
     }
 
-    private static void Step3_regsiterNewCustomer() {
+        private static void Step4_clickOnRegisterButton() {
+        driver.findElement(By.xpath("//button[contains(text(),'Register')]."))
+                .click();
+        }
+
+        private static void Step3_regsiterNewCustomer() {
         driver.findElement(By.xpath("//input[@id='reg_username']"))
                 .sendKeys("tarun");
         waitTimeInSecond(4);
